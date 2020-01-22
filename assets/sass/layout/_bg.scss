@@ -47,9 +47,11 @@
 				'filter #{_duration(article)} ease-in-out'
 			));
 			background-image:		url('../../images/bg.jpg');
-			background-position:	center;
-			background-size:		cover;
-			background-repeat:		no-repeat;
+			background-position: center top;
+			background-size: cover;
+			background-repeat: no-repeat;
+			-webkit-filter: blur(5px);
+			filter: blur(5px);			
 			z-index: 1;
 		}
 
