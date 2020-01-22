@@ -1,0 +1,204 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+body { 
+	font: 75% 'Roboto', sans-serif;
+	line-height: 1.9;
+	color: #FF1493;
+}
+	
+body::before {
+	content: '';
+	background: #fff url('https://images.unsplash.com/photo-1539646899451-eff372db037f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.9;
+}
+
+h3 { 
+	font: 1.4em;
+	color: #FF1493;
+}
+
+a:link,
+a:visited { 
+	text-decoration: none; 
+	color: #fff;
+}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #ff1493;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+/* specific divs */
+.page-wrapper { 
+	padding: 0 175px 0 110px;
+	position: relative;
+}
+
+.intro { 
+	min-width: 470px;
+	width: 100%;
+	margin-top: 200px;
+}
+
+.intro .asset-1 {
+	width: 70%;
+	opacity: 0.9;
+}
+
+.intro .asset-2 {
+	width: 40%;
+	opacity: 0.9;
+}
+
+.intro header {
+	margin-bottom: 20vw;
+	text-align: center;
+}
+
+.intro header::before {
+	content: '';
+	top: -200px;
+	left: 0;
+	width: 100%;
+	height: 90vh;
+	position: absolute;
+	background-image: linear-gradient(rgba(0,120,150,0.8), rgba(0,120,150,0));
+}
+
+.button-wrap {
+	width: 10%;
+	margin: 0 auto 50px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 10px;
+}
+
+.button {
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid white;
+	text-align: center;
+	padding: 15px;
+	transition: 0.3s ease-in;
+	color: #fff;
+}
+
+.button:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.6);
+	box-shadow: #007896 8px 8px 25px, #007896 -8px -8px 25px;
+}
+
+.container2 {
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.summary {
+	margin: 20px 20px 20px 10px; 
+	width: 160px; 
+}
+
+.preamble {
+	padding: 0px 10px 0 10px;
+}
+
+.supporting {	
+	width: 100%;
+	padding: 20px; 
+	margin-bottom: 80px;
+	display: grid;
+	grid-template-areas:
+	'about about participation participation'
+	'benefits requirement requirement requirement'
+	'footer footer footer footer';
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+	font-size: 0.9rem;
+}
+
+.explanation {
+	grid-area: about;
+	border-right: #fff solid 2px;
+	padding-right: 15px;
+	margin-right: 15px;
+}
+.participation { grid-area: participation; }
+.benefits {
+	grid-area: benefits;
+	border-right: #fff solid 2px;
+	padding: 60px 15px 0 0;
+	margin: 20px 15px 0 0;
+}
+.requirements {
+	grid-area: requirement;
+	margin-top: 20px;
+}
+
+footer { 
+	text-align: center;
+	margin-top: 60px;
+	grid-area: footer;
+}
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+}
+
+aside.sidebar .wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: rgba(0,0,0,0.5);
+	font-size: 10px;
+	padding: 10px;
+}
+
+.sidebar ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar li {
+	list-style-type: none;
+	padding: 0 20px;
+}
+
+.indicator {
+	font-size: 1.2rem;
+	color: #FF1493;
+}
+
+.design-archives {
+	margin: 0 25px;
+}
