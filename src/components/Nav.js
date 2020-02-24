@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components";
-import LinkedIn from "../img/linked.png";
+import LinkedIn from "../img/favicon/logo192.png";
 
 const navbg = "#283E4A";
 const navcolor = "#C7D1D8";
@@ -36,7 +36,6 @@ justify-content: space-between;
     form {
       width: 250px;
       height: 35px;
-      margin: 5px 0;
       position: relative;
       overflow: hidden;
 
@@ -80,7 +79,7 @@ justify-content: space-between;
 
   ul {
     display: flex;
-    height: 55px;
+    height: 42px;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -106,7 +105,7 @@ justify-content: space-between;
         
         &::before {
           content: "　";
-          height: 65px;
+          height: 52px;
           border-left: 1px solid ${navcolor};
           position: absolute;
           right: 40px;

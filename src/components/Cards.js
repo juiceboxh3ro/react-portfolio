@@ -10,15 +10,18 @@ const Container = styled.div`
   min-width: 500px;
   border-radius: 2px;
   font-size: 1.6rem;
-  margin: 0 auto 50px;
+  margin: 0 auto 15px;
   padding-bottom: 25px;
+  object-fit: cover;
+  overflow: hidden;
+  background: #fff;
 
   #img-cont {
     padding: 0 24px;
     display: flex;
     justify-content: flex-start;
     margin-top: -104px;
-
+    
     img {
       width: 152px;
       border: 5px solid #E2E4E5;
@@ -61,13 +64,13 @@ const Container = styled.div`
         li {
           font-size: 1.6rem;
           font-weight: 100;
-          padding-left: 15px;
+          padding-left: 12px;
           list-style: none;
 
           &::before {
             content:"•";
             font-size: 1rem;
-            padding-right: 10px;
+            padding-right: 8px;
 
           }
           

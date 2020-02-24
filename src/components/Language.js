@@ -3,24 +3,27 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   max-width: 1128px;
-  margin: 0 auto 50px;
+  margin-left: 20px;
+  align-self: flex-start;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 const Buttons = styled.a`
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
   text-align: center;
   vertical-align: middle;
-  height: 40px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
-  border-radius: 2px;
-  padding: 5px 60px;
+  width: 150px;
+  height: 32px;
+  border: 1px solid #626262;
+  padding: 4px 0;
   text-decoration: none;
   color: #333;
-
+  color: #626262;
+    
   &:hover {
     cursor: pointer;
   }
@@ -29,15 +32,22 @@ const Buttons = styled.a`
     outline: none;
   }
 
-  &:last-child {
-    margin-left: 50px;
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: none;
   }
+  &:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
 `;
 
 const Language = () => {
   return (
     <Wrapper>
-      <Buttons href="https://drive.google.com/uc?export=download&id=17NVEbobCBBGAB6Sx0VZCcI3YSoNtm2Xw">English</Buttons>
+      <Buttons className="active" href="https://drive.google.com/uc?export=download&id=17NVEbobCBBGAB6Sx0VZCcI3YSoNtm2Xw">English</Buttons>
       <Buttons value="日本語">日本語</Buttons>
     </Wrapper>
   )
