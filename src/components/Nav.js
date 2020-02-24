@@ -36,6 +36,7 @@ justify-content: space-between;
     form {
       width: 250px;
       height: 35px;
+      margin: 5px 0;
       position: relative;
       overflow: hidden;
 
@@ -79,8 +80,11 @@ justify-content: space-between;
 
   ul {
     display: flex;
+    height: 55px;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
+    position: relative;
   
     li {
       margin-left: 30px;
@@ -95,6 +99,19 @@ justify-content: space-between;
       a {
         color: ${navcolor};
         text-decoration: none;
+      }
+
+      &:last-child {
+        padding-left: 20px;
+        
+        &::before {
+          content: "　";
+          height: 65px;
+          border-left: 1px solid ${navcolor};
+          position: absolute;
+          right: 40px;
+          top: -5px;
+        }
       }
     }
   }
@@ -118,7 +135,6 @@ const Nav = () => {
         <li>Messaging</li>
         <li>Notifications</li>
         <li>Me</li>
-        <li><span id="navpipe">|</span></li>
         <li>Work</li>
       </ul>
     </MyNav>
