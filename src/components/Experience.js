@@ -2,14 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  min-width: 500px;
-  width: 800px;
+  width: 100%;
   padding: 24px 24px 25px;
-  margin-right: auto;
-  margin-left: 4px;
   margin-bottom: 50px;
   box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+  border-radius: 2px;
   background: #fff;
+  grid-column-start: 1;
   
     h2 {
       font-size: 2rem;
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
 const Experience = () => {
   return (
     <Wrapper>
-      <h2>Works:</h2>
+      <h2>Works</h2>
     </Wrapper>
   )
 }

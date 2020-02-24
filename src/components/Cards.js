@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import banner from "../img/0.jfif"
 import profile from "../img/profilepic.jfif"
@@ -7,10 +8,10 @@ import lambda from "../img/lambda.png"
 
 const Container = styled.div`
   box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
-  min-width: 500px;
+  width: 100%;
   border-radius: 2px;
   font-size: 1.6rem;
-  margin: 0 auto 15px;
+  margin-bottom: 15px;
   padding-bottom: 25px;
   object-fit: cover;
   overflow: hidden;
@@ -66,6 +67,22 @@ const Container = styled.div`
           font-weight: 100;
           padding-left: 12px;
           list-style: none;
+
+          .contact-link {
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding-left: 12px;
+            color: #0084BF;
+
+            &:visited,
+            &:active {
+              color: #0084BF;
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
 
           &::before {
             content:"•";
@@ -128,7 +145,7 @@ const Cards = () => {
             <ul>
               <li>Laurel, Maryland</li>
               <li><span>500+ connections</span></li>
-              <li><span>Contact info</span></li>
+              <li><span><Link className="contact-link" to="/contact">Contact info</Link></span></li>
             </ul>
           </div>
           <InfoRight id="information-right">

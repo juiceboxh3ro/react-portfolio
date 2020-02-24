@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  max-width: 1128px;
   margin-left: 20px;
-  align-self: flex-start;
   display: flex;
   flex-direction: row;
   align-items: flex-start;

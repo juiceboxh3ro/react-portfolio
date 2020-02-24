@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 import styled from "styled-components";
 import Nav from "./components/Nav";
@@ -7,16 +8,14 @@ import Cards from "./components/Cards";
 import Language from "./components/Language";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import ContactCard from "./components/ContactCard";
 
 const CardDeck = styled.section`
   max-width: 1128px;
   margin: 20px auto -20px;
   border-radius: 3px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 800px auto;
 `;
 
 const Footer = styled.footer`
@@ -32,13 +31,18 @@ function App() {
   return (
     <div>
       <Nav />
-      <Header />
-      <CardDeck id="card-deck">
-        <Cards />
-        <Language />
-        <About />
-        <Experience />
-      </CardDeck>
+      <Route exact path="/">
+        <Header />
+        <CardDeck id="card-deck">
+          <Cards />
+          <Language />
+          <About />
+          <Experience />
+        </CardDeck>
+      </Route>
+      <Route path="/contact">
+        <ContactCard />
+      </Route>
       <Footer>
         <div>
           <p>

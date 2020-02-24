@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import LinkedIn from "../img/favicon/logo192.png";
 
@@ -95,7 +96,8 @@ justify-content: space-between;
         margin-left: 0;
       }
       
-      a {
+      .nav-link {
+        font-size: 1.2rem;
         color: ${navcolor};
         text-decoration: none;
       }
@@ -121,14 +123,14 @@ const Nav = () => {
     <Wrapper>
     <MyNav>
       <div className="wrapper">
-        <img id="linked" src={LinkedIn} alt="LinkedIn"></img>
+      <Link className="img-link" to="/"><img id="linked" src={LinkedIn} alt="LinkedIn"></img></Link>
         <form action="/action_page.php">
           <input type="text" required autoComplete="off" name="search" placeholder="Search"></input>
           <label htmlFor="search"><span id="content-search">Search</span></label>
         </form>
       </div>
       <ul>
-        <li>Home</li>
+        <li><Link className="nav-link" to="/">Home</Link></li>
         <li>My Network</li>
         <li>Jobs</li>
         <li>Messaging</li>
