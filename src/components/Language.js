@@ -1,12 +1,20 @@
 import React from 'react'
 import styled from 'styled-components';
 
+const mobile = "(max-width: 375px)";
+const tablet = "(max-width: 768px)";
+
 const Wrapper = styled.div`
   margin-left: 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  
+  @media(max-width: 375px) {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
 `;
 
 const Buttons = styled.a`

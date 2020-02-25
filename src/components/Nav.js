@@ -7,6 +7,9 @@ const navbg = "#283E4A";
 const navcolor = "#C7D1D8";
 const background = "#F5F5F5"
 
+const mobile = "(max-width: 375px)";
+const tablet = "(max-width: 768px)";
+
 const Wrapper = styled.nav`
   background: ${navbg};
 `;
@@ -20,15 +23,24 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 
+@media ${mobile} {
+  width: 95%;
+}
+
   .wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     
+    @media ${mobile} {
+      margin: 0 auto;
+    }
+    
     #linked {
       margin-right: 12px;
       margin-top: 2px;
       width: 35px;
+
 
       &:hover {
         cursor: pointer;
@@ -40,6 +52,10 @@ justify-content: space-between;
       height: 35px;
       position: relative;
       overflow: hidden;
+      
+      @media ${mobile} {
+        display: none;
+      }
 
       input {
         background: ${background};
@@ -92,6 +108,10 @@ justify-content: space-between;
       list-style: none;
       font-size: 1.2rem;
       color: ${navcolor};
+      
+      @media ${mobile} {
+        display: none;
+      }
 
       &:first-child {
         margin-left: 0;

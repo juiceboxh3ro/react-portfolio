@@ -10,12 +10,23 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import ContactCard from "./components/ContactCard";
 
+const mobile = "(max-width: 375px)";
+const tablet = "(max-width: 768px)";
+
 const CardDeck = styled.section`
   max-width: 1128px;
   margin: 20px auto -20px;
   border-radius: 3px;
   display: grid;
   grid-template-columns: 800px auto;
+
+  @media ${mobile} {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Footer = styled.footer`

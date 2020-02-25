@@ -6,6 +6,9 @@ import profile from "../img/profilepic.jfif"
 import business from "../img/business.png"
 import lambda from "../img/lambda.png"
 
+const mobile = "(max-width: 375px)";
+const tablet = "768px";
+
 const Container = styled.div`
   box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
   width: 100%;
@@ -17,6 +20,11 @@ const Container = styled.div`
   overflow: hidden;
   background: #fff;
 
+  @media ${mobile} {
+    width: 95%;
+    font-size: 1.4rem;
+  }
+
   #img-cont {
     padding: 0 24px;
     display: flex;
@@ -27,6 +35,10 @@ const Container = styled.div`
       width: 152px;
       border: 5px solid #E2E4E5;
       border-radius: 50%;
+
+      @media ${mobile} {
+        border-radisu: 150px;
+      }
     }
   }
 
@@ -35,6 +47,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media ${mobile} {
+      flex-direction: column;
+    }
     
     #information-left {
       text-align: left;
@@ -42,12 +58,16 @@ const Container = styled.div`
       h2 {
         font-size: 2.4rem;
         font-weight: 400;
+        
+        @media ${mobile} { font-size: 2rem; }
       }
 
       h3 {
         font-size: 2rem;
         line-height: 1.7;
         font-weight: 100;
+
+        @media ${mobile} { font-size: 1.8rem; }
       }
 
       ul {
@@ -55,11 +75,19 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media ${mobile} {
+          justify-content: flex-start;
+        }
         
         span {
           font-size: 1.6rem;
           color: #0084BF;
           font-weight: 600;
+          @media ${mobile} {
+            font-size: 1.4rem;
+          }
         }
 
         li {
@@ -68,11 +96,25 @@ const Container = styled.div`
           padding-left: 12px;
           list-style: none;
 
+          &:last-child {
+            @media ${mobile} {
+              margin-left: 47px;
+            }
+          }
+          
+          @media ${mobile} {
+            padding-left: 0;
+          }
+
           .contact-link {
             text-decoration: none;
             font-size: 1.6rem;
             font-weight: 600;
             color: #0084BF;
+
+            @media ${mobile} {
+              font-size: 1.4rem;
+            }
 
             &:visited,
             &:active {
@@ -88,11 +130,20 @@ const Container = styled.div`
             font-size: 1rem;
             padding-right: 8px;
 
+            @media ${mobile} {
+              content:"";
+              padding-right: 0;
+            }
           }
           
           &:first-child {
             padding-left: 0;
             list-style: none;
+            
+            @media ${mobile} {
+              width: 100%;
+            }
+
 
           &::before {
             content:"";
@@ -109,20 +160,29 @@ const Container = styled.div`
 const InfoRight = styled.div`
 width: 25%;
 margin-top: 7px;
+@media ${mobile} {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
   img {
     width: 26px;
     margin-bottom: 8px;
     display: inline-block;
     border-radius: 3px;
-
   }
+
   span {
     margin-left: 12px;
     line-height: 1.5;
     font-size: 1.6rem;
     font-weight: 600;
     vertical-align: top;
+    
+    @media ${mobile} {
+      margin-left: 0;
+    }
   }
 `;
 

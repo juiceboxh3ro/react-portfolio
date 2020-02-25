@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const mobile = "(max-width: 375px)";
+const tablet = "(max-width: 768px)";
+
 const Wrapper = styled.div`
   width: 100%;
   padding: 24px 24px 25px;
@@ -9,6 +12,10 @@ const Wrapper = styled.div`
   border-radius: 2px;
   background: #fff;
   grid-column-start: 1;
+
+  @media ${mobile} {
+    width: 95%;
+  }
   
     h2 {
       font-size: 2rem;
