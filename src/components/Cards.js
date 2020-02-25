@@ -29,15 +29,18 @@ const Container = styled.div`
     padding: 0 24px;
     display: flex;
     justify-content: flex-start;
-    margin-top: -104px;
+    margin-top: -75px;
     
     img {
       width: 152px;
+      height: 152px;
       border: 5px solid #E2E4E5;
       border-radius: 50%;
 
       @media ${mobile} {
-        border-radisu: 150px;
+        width: 120px;
+        height: 120px;
+        border-radius: 150px;
       }
     }
   }
@@ -75,9 +78,10 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        flex-wrap: wrap;
+        
 
         @media ${mobile} {
+          flex-direction: column;
           justify-content: flex-start;
         }
         
@@ -85,6 +89,7 @@ const Container = styled.div`
           font-size: 1.6rem;
           color: #0084BF;
           font-weight: 600;
+
           @media ${mobile} {
             font-size: 1.4rem;
           }
@@ -95,12 +100,6 @@ const Container = styled.div`
           font-weight: 100;
           padding-left: 12px;
           list-style: none;
-
-          &:last-child {
-            @media ${mobile} {
-              margin-left: 47px;
-            }
-          }
           
           @media ${mobile} {
             padding-left: 0;
@@ -139,11 +138,6 @@ const Container = styled.div`
           &:first-child {
             padding-left: 0;
             list-style: none;
-            
-            @media ${mobile} {
-              width: 100%;
-            }
-
 
           &::before {
             content:"";
@@ -160,6 +154,7 @@ const Container = styled.div`
 const InfoRight = styled.div`
 width: 25%;
 margin-top: 7px;
+
 @media ${mobile} {
   width: 100%;
   display: flex;
@@ -168,6 +163,7 @@ margin-top: 7px;
 
   img {
     width: 26px;
+    height: 26px;
     margin-bottom: 8px;
     display: inline-block;
     border-radius: 3px;
