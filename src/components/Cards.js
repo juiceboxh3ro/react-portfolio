@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import banner from "../img/0.jfif"
 import profile from "../img/profilepic.jfif"
-import business from "../img/business.png"
+import business from "../img/tuj-logo.png"
 import lambda from "../img/lambda.png"
 
 const mobile = "(max-width: 415px)";
@@ -204,7 +204,7 @@ const Cards = () => {
             </ul>
           </div>
           <InfoRight id="information-right">
-            <img src={business} alt=""/><span>From Zero, LLC</span><br />
+            <img src={business} alt=""/><span>Temple University</span><br />
             <img src={lambda} alt=""/><span>Lambda School</span>
           </InfoRight>
         </div>

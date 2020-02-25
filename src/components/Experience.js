@@ -28,10 +28,51 @@ const Wrapper = styled.div`
     }
 `;
 
+const Portfolio = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  div {
+    margin: 0 auto 50px;
+    padding: 15px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    border-radius: 2px;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+      
+    &:hover {
+      opacity: 1;
+    }
+
+
+    @media ${mobile} {
+      width: 100px;
+      height: 100px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(5) {
+      @media ${mobile} {
+        margin: 0 25px 50px;
+      }
+    }
+  }
+`;
+
 const Experience = () => {
   return (
     <Wrapper>
-      <h2>Works</h2>
+      <h2>Experience</h2>
+      <Portfolio>
+
+      </Portfolio>
     </Wrapper>
   )
 }
