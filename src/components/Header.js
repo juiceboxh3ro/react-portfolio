@@ -36,6 +36,11 @@ const Header1 = styled.header`
         color: black;
         vertical-align: top;
       }
+      &:hover::after {
+        content: "No need to manage your ad options; no ads! :)";
+        font-size: 1rem;
+        display: inline;
+      }
     }
   }
 `;

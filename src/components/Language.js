@@ -39,14 +39,13 @@ const Buttons = styled.a`
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
   }
-
 `;
 
 const Language = () => {
   return (
     <Wrapper>
-      <Buttons className="active" href="https://drive.google.com/uc?export=download&id=17NVEbobCBBGAB6Sx0VZCcI3YSoNtm2Xw">English</Buttons>
-      <Buttons value="日本語">日本語</Buttons>
+      <Buttons className="language-toggle active" href="https://drive.google.com/uc?export=download&id=17NVEbobCBBGAB6Sx0VZCcI3YSoNtm2Xw">English</Buttons>
+      <Buttons className="language-toggle" href="https://drive.google.com/uc?export=download&id=1Bw0xbcgtRYZ7RlGsNQdaXGB0JGf5hspC">日本語</Buttons>
     </Wrapper>
   )
 }

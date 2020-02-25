@@ -27,6 +27,7 @@ justify-content: space-between;
     
     #linked {
       margin-right: 12px;
+      margin-top: 2px;
       width: 35px;
 
       &:hover {

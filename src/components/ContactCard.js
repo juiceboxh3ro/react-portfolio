@@ -11,7 +11,7 @@ const ContactCard = () => {
   return (
     <Wrapper>
       Form coming soon.<br />
-      Click home or my logo to go back.
+      For now, click home or my logo to go back.
     </Wrapper>
   )
 }

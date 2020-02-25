@@ -72,7 +72,6 @@ const Container = styled.div`
             text-decoration: none;
             font-size: 1.6rem;
             font-weight: 600;
-            padding-left: 12px;
             color: #0084BF;
 
             &:visited,
@@ -141,9 +140,9 @@ const Cards = () => {
         <div id="info-cont">
           <div id="information-left">
             <h2>Jesse Goodburne</h2>
-            <h3>In Lambda School for Web Development!</h3>
+            <h3>Web Developer</h3>
             <ul>
-              <li>Laurel, Maryland</li>
+              <li>Laurel, MD</li>
               <li><span>500+ connections</span></li>
               <li><span><Link className="contact-link" to="/contact">Contact info</Link></span></li>
             </ul>
