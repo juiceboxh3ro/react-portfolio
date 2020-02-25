@@ -6,7 +6,7 @@ import profile from "../img/profilepic.jfif"
 import business from "../img/business.png"
 import lambda from "../img/lambda.png"
 
-const mobile = "(max-width: 375px)";
+const mobile = "(max-width: 415px)";
 const tablet = "768px";
 
 const Container = styled.div`

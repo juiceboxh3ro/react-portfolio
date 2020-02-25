@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const mobile = "(max-width: 375px)";
+const mobile = "(max-width: 415px)";
 const tablet = "(max-width: 768px)";
 
 const Wrapper = styled.div`

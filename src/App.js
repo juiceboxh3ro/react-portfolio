@@ -10,7 +10,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import ContactCard from "./components/ContactCard";
 
-const mobile = "(max-width: 375px)";
+const mobile = "(max-width: 415px)";
 const tablet = "(max-width: 768px)";
 
 const CardDeck = styled.section`
