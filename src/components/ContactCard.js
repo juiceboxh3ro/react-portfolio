@@ -1,18 +1,37 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 100px;
-`;
+import { ContactWrap } from "./styles";
 
 const ContactCard = () => {
   return (
-    <Wrapper>
-      Form coming soon.<br />
-      For now, click home or my logo to go back.
-    </Wrapper>
+    <ContactWrap>
+      <form autoComplete="off">
+        <section className="name">
+          <input type="text" name="name"/>
+          <br />
+          <label class="input-label" htmlFor="name">Name</label>
+        </section>
+
+        <section className="email">
+          <input type="text" required name="email"/>
+          <br />
+          <label class="input-label" htmlFor="email">Email</label>
+        </section>
+
+        <section className="subject">
+          <input type="text" name="subject"/>
+          <br />
+          <label class="input-label" htmlFor="subject">Subject</label>
+        </section>
+
+        <section className="message">
+          <label id="message-label" htmlFor="message">Message</label>
+          <br />
+          <textarea name="message" id="message"></textarea>
+        </section>
+
+        <input type="submit"/>
+      </form>
+    </ContactWrap>
   )
 }
 
