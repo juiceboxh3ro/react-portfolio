@@ -1,38 +1,59 @@
 import React from 'react';
-import { ContactWrap } from "./styles";
+import { ContactWrap, ErrorP, SubmitButton } from './styles';
+import { withFormik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 
-const ContactCard = () => {
+const ContactCard = ({ errors, touched, values }) => {
   return (
     <ContactWrap>
-      <form autoComplete="off">
-        <section className="name">
-          <input type="text" name="name"/>
-          <br />
-          <label class="input-label" htmlFor="name">Name</label>
-        </section>
+      <Form>
+        <div class="pseudo-label">
+          <Field required id="name" type="text" name="name" />
+          <label className="name-label" htmlFor="name">
+            <span className="content-label">Name</span>
+          </label>
+        </div>
+        {touched.name && errors.name && (<ErrorP className="error">{errors.name}</ErrorP>)}
 
-        <section className="email">
-          <input type="text" required name="email"/>
-          <br />
-          <label class="input-label" htmlFor="email">Email</label>
-        </section>
+        <div class="pseudo-label">
+          <Field required id="email" type="email" name="email" />
+          <label className="name-label" htmlFor="email">
+            <span className="content-label">Email Address</span>
+          </label>
+        </div>
+        {touched.email && errors.email && (<ErrorP className="error">{errors.email}</ErrorP>)}
 
-        <section className="subject">
-          <input type="text" name="subject"/>
-          <br />
-          <label class="input-label" htmlFor="subject">Subject</label>
-        </section>
+        <div class="pseudo-label">
+          <Field autoComplete="off" id="message" component="textarea" type="text" name="message" />
+          <label className="name-label" htmlFor="message">
+            <span className="content-label">Message</span>
+          </label>
+        </div>
+        {touched.message && errors.message && (<ErrorP className="error">{errors.message}</ErrorP>)}
 
-        <section className="message">
-          <label id="message-label" htmlFor="message">Message</label>
-          <br />
-          <textarea name="message" id="message"></textarea>
-        </section>
-
-        <input type="submit"/>
-      </form>
+        <SubmitButton type="submit">Send it!</SubmitButton>
+      </Form>
     </ContactWrap>
   )
 }
 
-export default ContactCard;
+const FormikContakt = withFormik({
+  mapPropsToValues(values) {
+    return {
+      name: '',
+      email: '',
+      message: ''
+    }
+  },
+  validationSchema: Yup.object().shape({
+    name: Yup.string().required('I need to know who this message is from!'),
+    email: Yup.string().required('I need to be able to reply to you!'),
+    message: Yup.string().required("I can't reply to nothing!")
+  }),
+  handleSubmit(values, { resetForm }) {
+    console.log('Message sending', values);
+    resetForm();
+  }
+})(ContactCard)
+
+export default FormikContakt;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import './App.css';
+import './index.css';
 
 import { CardDeck } from "./components/styles";
 
@@ -11,7 +11,7 @@ import Language from "./components/Language";
 import Highlight from "./components/Highlight";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import ContactCard from "./components/ContactCard";
+import FormikContakt from "./components/ContactCard";
 
 import CardsJPN from "./components/japanese/CardsJPN";
 import AboutJPN from "./components/japanese/AboutJPN";
@@ -45,7 +45,7 @@ function App() {
       </Route>
 
       <Route path="/contact">
-        <ContactCard />
+        <FormikContakt />
       </Route>      
     </div>
   );
