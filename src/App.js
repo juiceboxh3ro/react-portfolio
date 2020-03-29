@@ -8,7 +8,6 @@ import Language from "./components/Language";
 import Highlight from "./components/Highlight";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import FormikContakt from "./components/ContactCard";
 
 function App() {
   const [language, setLanguage] = useState("English")
@@ -36,10 +35,6 @@ function App() {
           <Experience language={language} />
         </div>
       </Route>
-
-      <Route path="/contact">
-        <FormikContakt />
-      </Route>      
     </div>
   );
 }

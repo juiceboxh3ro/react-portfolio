@@ -1,7 +1,6 @@
 import React from 'react';
 
 const About = ({language}) => {
-  console.log(language)
   return (
     <div className="wrapper">
       {language === "English" ? (

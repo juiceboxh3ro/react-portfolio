@@ -3,6 +3,7 @@ nav {
   
   div {
     max-width: 1128px;
+    height: 52px;
     margin: 0 auto;
     padding: 5px 0;
     margin-bottom: 20px;
@@ -17,7 +18,7 @@ nav {
             
       #linked {
         margin-right: 12px;
-        margin-top: 2px;
+        margin-top: 18px;
         width: 35px;
   
         &:hover {
@@ -28,6 +29,8 @@ nav {
       form {
         width: 250px;
         height: 35px;
+        margin-top: 18px;
+        margin-right: 340px;
         position: relative;
         overflow: hidden;
   
