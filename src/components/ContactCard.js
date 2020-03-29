@@ -1,11 +1,10 @@
 import React from 'react';
-import { ContactWrap, ErrorP, SubmitButton } from './styles';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
 const ContactCard = ({ errors, touched, values }) => {
   return (
-    <ContactWrap>
+    <div id="contact-wrap">
       <Form>
         <div class="pseudo-label">
           <Field required id="name" type="text" name="name" />
@@ -13,7 +12,7 @@ const ContactCard = ({ errors, touched, values }) => {
             <span className="content-label">Name</span>
           </label>
         </div>
-        {touched.name && errors.name && (<ErrorP className="error">{errors.name}</ErrorP>)}
+        {touched.name && errors.name && (<p className="error">{errors.name}</p>)}
 
         <div class="pseudo-label">
           <Field required id="email" type="email" name="email" />
@@ -21,7 +20,7 @@ const ContactCard = ({ errors, touched, values }) => {
             <span className="content-label">Email Address</span>
           </label>
         </div>
-        {touched.email && errors.email && (<ErrorP className="error">{errors.email}</ErrorP>)}
+        {touched.email && errors.email && (<p className="error">{errors.email}</p>)}
 
         <div class="pseudo-label">
           <Field autoComplete="off" id="message" component="textarea" type="text" name="message" />
@@ -29,11 +28,11 @@ const ContactCard = ({ errors, touched, values }) => {
             <span className="content-label">Message</span>
           </label>
         </div>
-        {touched.message && errors.message && (<ErrorP className="error">{errors.message}</ErrorP>)}
+        {touched.message && errors.message && (<p className="error">{errors.message}</p>)}
 
-        <SubmitButton type="submit">Send it!</SubmitButton>
+        <button id="submit" type="submit">Send it!</button>
       </Form>
-    </ContactWrap>
+    </div>
   )
 }
 

@@ -1,8 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
-import './index.css';
-
-import { CardDeck } from "./components/styles";
 
 import Nav from "./components/Nav";
 import Header from "./components/Header";
@@ -13,35 +10,31 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import FormikContakt from "./components/ContactCard";
 
-import CardsJPN from "./components/japanese/CardsJPN";
-import AboutJPN from "./components/japanese/AboutJPN";
-import HighlightJPN from "./components/japanese/HighlightJPN";
-
 function App() {
+  const [language, setLanguage] = useState("English")
+
+  const handleLanguage = () => {
+    if(language==="English") {
+      setLanguage("Japanese")
+    } else if (language==="Japanese") {
+      setLanguage("English")
+    }
+  }
+
   return (
     <div>
       <Nav />
 
       <Route exact path="/">
-        <Header />
-        <CardDeck id="card-deck">
-          <Cards />
-          <Language />
-          <Highlight />
-          <About />
-          <Experience />
-        </CardDeck>
-      </Route>
+        <Header language={language} />
 
-      <Route exact path="/jpn">
-        <Header />
-        <CardDeck id="card-deck">
-          <CardsJPN />
-          <Language />
-          <HighlightJPN />
-          <AboutJPN />
-          <Experience />
-        </CardDeck>
+        <div id="card-deck">
+          <Cards language={language} />
+          <Language handleLanguage={handleLanguage} />
+          <Highlight language={language} />
+          <About language={language} />
+          <Experience language={language} />
+        </div>
       </Route>
 
       <Route path="/contact">

@@ -1,14 +1,24 @@
 import React from 'react';
-import { Wrapper, Portfolio } from './styles';
 
-const Experience = () => {
+const Experience = ({language}) => {
   return (
-    <Wrapper>
-      <h2>Experience</h2>
-      <Portfolio>
+    <div className="wrapper">
+      {language === "English" ? (
+        <>
+          <h2>Experience</h2>
+          <div className="portfolio">
 
-      </Portfolio>
-    </Wrapper>
+          </div>
+        </>
+      ) : (
+        <>
+          <h2>経験</h2>
+          <div className="portfolio">
+
+          </div>
+        </>
+      )}
+    </div>
   )
 }
 
