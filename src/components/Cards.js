@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 import banner from "../img/0.jfif";
 import profile from "../img/profilepic.jfif";

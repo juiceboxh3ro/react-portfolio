@@ -22,9 +22,9 @@ function App() {
 
   return (
     <div>
-      <Nav />
+      <Route path="/">
+        <Nav />
 
-      <Route exact path="/">
         <Header language={language} />
 
         <div id="card-deck">
